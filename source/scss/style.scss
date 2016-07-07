@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab|Merriweather);
+
+$header-font: "Merriweather";
+$clock-font: "Open Sans";
+$button-font: "Roboto Slab";
+
+html {
+  font-size: 16px;
+}
+
+.work-background {
+  background: #bfe;
+}
+
+.break-background {
+  background: url('/img/break.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.header {
+  font-size: 4em;
+  font-family: $header-font;
+}
+
+.clock {
+  margin: 2.5rem auto 0;
+  background-color: #dd6;
+  height: 10rem;
+  width: 18rem;
+  border: 6px outset #eef;
+  border-radius: 20px;
+  font-size: 6em;
+  font-family: $clock-font;
+}
+
+.pomodoro-status {
+  margin: .6rem 0 -.8rem 0;
+  font-size: .3em;
+}
+
+.buttons {
+  margin: 2rem auto;
+}
+
+.clock-btn {
+  display: inline-block;
+  margin: 0 auto;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  height: 4.5rem;
+  width: 8rem;
+  color: #eee;
+  font-size: 2em;
+  font-family: $button-font;
+}
+
+.start-pause {
+  background-color: #4a4;
+  width: 12rem;
+}
+
+.reset {
+  background-color: #f54;
+}
+
+.increment {
+	height: 2.8rem;
+	width: 2.8rem;
+	border-radius: 100%;
+	background-color: #BBB;
+}
+
+.increments {
+	margin: 0 0 0 0;
+
+	span {
+		margin: 0rem 0 0 1rem;
+		font-size: 4em;
+	}
+}
