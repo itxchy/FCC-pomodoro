@@ -15,9 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'source/js/vendor/*.js',
-      'source/js/*.js',
-      'test/**/*spec.js'
+        { pattern: 'spec.entry.js' }
     ],
 
 
@@ -29,6 +27,23 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'spec.entry.js': ['webpack', 'sourcemap']
+    },
+
+    webpack: {
+        devtool: 'inline-source-map',
+        module: {
+            loaders: [
+                { 
+                    test: /\.js$/,
+                    exclude: [/public\/js/, /node_modules/],
+                    loader: 'babel',
+                    query: {
+                        presets: ['es2015']
+                    }
+                }
+            ]
+        }
     },
 
 
@@ -38,9 +53,11 @@ module.exports = function(config) {
     reporters: ['mocha'],
 
     plugins: [
-      'karma-jasmine',
-      'karma-mocha-reporter',
-      'karma-chrome-launcher'
+      require('karma-jasmine'),
+      require('karma-mocha-reporter'),
+      require('karma-chrome-launcher'),
+      require('karma-webpack'),
+      require('karma-sourcemap-loader')
     ],
 
 
