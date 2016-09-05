@@ -39,8 +39,19 @@ html {
   font-size: .3em;
 }
 
+// **** Buttons ****
+
 .buttons {
   margin: 2rem auto;
+}
+
+// removes the bootstrappy blue outlines
+.clock-btn:active,
+.clock-btn:focus,
+.clock-btn.active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .clock-btn {
