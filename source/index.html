@@ -1,26 +1,25 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>FCC Pomodoro</title>
-    <meta name="description" content="A Pomodoro Timer built with Angular 1.5">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body ng-controller="PomodoroCtrl as vm" ng-class="{'work-background' : vm.TimerModelService.workTime, 'break-background' : !vm.TimerModelService.workTime}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FCC Pomodoro</title>
+        <meta name="description" content="A Pomodoro Timer built with Angular 1.5">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-controller="PomodoroCtrl as vm" ng-class="{'work-background' : vm.TimerModelService.workTime, 'break-background' : !vm.TimerModelService.workTime}">
 
-    <div class="container">
+        <div class="container">
+            <h1 class="text-center header">
+                Pomodoro Clock
+            </h1>
+            <div class="container pomodoro">
+                <app></app>
+            </div>
+        </div>
 
-      <h1 class="text-center header">Pomodoro Clock</h1>
-
-      <div class="container pomodoro">
-        <app></app>
-      </div>
-
-    </div>
-
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  </body>
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    </body>
 </html>
